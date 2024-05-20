@@ -44,6 +44,9 @@ static void registry_handle_global(void *data, struct wl_registry *registry, uin
             printf("Successfully bound to gamescope_control\n");
 
             // Send requests (This will be made dynamic in the future and won't be hard coded)
+            // You can run any function in gamescope like this
+            // gamescope_control_take_screenshot(myGamescopeControl, path, type, flags);
+
             gamescope_control_rotate_display(myGamescopeControl, display_data->arg1, display_data->arg2);
 
             // We need to listen for the callback to confirm the command was received successfully
